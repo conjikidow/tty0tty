@@ -5,7 +5,7 @@
    ########################################################################
 
    Copyright (c) : 2013  Luis Claudio Gambôa Lopes
- 
+
     Based in Tiny TTY driver -  Copyright (C) 2002-2004 Greg Kroah-Hartman (greg@kroah.com)
 
    This program is free software; you can redistribute it and/or modify
@@ -288,7 +288,7 @@ exit:
 #define RELEVANT_IFLAG(iflag) ((iflag) & (IGNBRK|BRKINT|IGNPAR|PARMRK|INPCK))
 
 static void tty0tty_set_termios(struct tty_struct *tty,
-				struct ktermios *old_termios)
+				const struct ktermios *old_termios)
 {
 	unsigned int cflag;
 	unsigned int iflag;
@@ -356,7 +356,7 @@ static void tty0tty_set_termios(struct tty_struct *tty,
 		printk(KERN_DEBUG " - RTS/CTS is disabled\n");
 
 	/* determine software flow control */
-	/* if we are implementing XON/XOFF, set the start and 
+	/* if we are implementing XON/XOFF, set the start and
 	 * stop character in the device */
 	if (I_IXOFF(tty) || I_IXON(tty)) {
 		unsigned char stop_char = STOP_CHAR(tty);
