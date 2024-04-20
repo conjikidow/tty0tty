@@ -52,14 +52,14 @@
   Clone the repo https://github.com/conjikidow/tty0tty.git
 
   ```
-  git clone https://github.com/conjikidow/tty0tty.git
-  cd tty0tty
+  $ git clone https://github.com/conjikidow/tty0tty.git
+  $ cd tty0tty
   ```
 
   Run the installation script:
 
   ```
-  sudo ./install.sh
+  $ ./install.sh
   ```
 
   You should see new serial ports in ```/dev/``` (```ls /dev/tnt*```)
@@ -70,7 +70,7 @@
   edit the file /etc/modules (Debian) or /etc/modules.conf
 
   ```
-  nano /etc/modules
+  $ nano /etc/modules
   ```
   and add the following line:
 
